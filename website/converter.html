@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit Converter — Length, Weight &amp; Temperature | ClockTime Converter</title>
+<meta name="description" content="Convert length, weight, and temperature units instantly with a clean, fast, client-side unit converter.">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">🕒</span>
+      ClockTime Converter
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="converter.html" class="active">Unit Converter</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Unit Converter</h1>
+      <p>Length, weight, and temperature conversions — accurate, instant, and entirely in your browser.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="card" style="max-width:640px; margin:0 auto;">
+
+        <div class="converter-tabs">
+          <button class="tab-btn active" data-panel="length">Length</button>
+          <button class="tab-btn" data-panel="weight">Weight</button>
+          <button class="tab-btn" data-panel="temperature">Temperature</button>
+        </div>
+
+        <!-- Length -->
+        <div class="converter-panel active" id="panel-length">
+          <div class="converter-row">
+            <div class="field">
+              <label for="lengthFromValue">Amount</label>
+              <input type="number" id="lengthFromValue" value="1" step="any">
+              <select id="lengthFromUnit">
+                <option value="mm">Millimeters (mm)</option>
+                <option value="cm">Centimeters (cm)</option>
+                <option value="m" selected>Meters (m)</option>
+                <option value="km">Kilometers (km)</option>
+                <option value="in">Inches (in)</option>
+                <option value="ft">Feet (ft)</option>
+                <option value="yd">Yards (yd)</option>
+                <option value="mi">Miles (mi)</option>
+              </select>
+            </div>
+            <button class="swap-btn" id="lengthSwap" aria-label="Swap units">⇄</button>
+            <div class="field">
+              <label for="lengthToUnit">Converts to</label>
+              <input type="text" id="lengthToValue" readonly>
+              <select id="lengthToUnit">
+                <option value="mm">Millimeters (mm)</option>
+                <option value="cm">Centimeters (cm)</option>
+                <option value="m">Meters (m)</option>
+                <option value="km">Kilometers (km)</option>
+                <option value="in">Inches (in)</option>
+                <option value="ft" selected>Feet (ft)</option>
+                <option value="yd">Yards (yd)</option>
+                <option value="mi">Miles (mi)</option>
+              </select>
+            </div>
+          </div>
+          <div class="result-box">
+            <div class="result-value" id="lengthResult">—</div>
+            <div class="result-note">Rounded to 6 significant digits</div>
+          </div>
+        </div>
+
+        <!-- Weight -->
+        <div class="converter-panel" id="panel-weight">
+          <div class="converter-row">
+            <div class="field">
+              <label for="weightFromValue">Amount</label>
+              <input type="number" id="weightFromValue" value="1" step="any">
+              <select id="weightFromUnit">
+                <option value="mg">Milligrams (mg)</option>
+                <option value="g" selected>Grams (g)</option>
+                <option value="kg">Kilograms (kg)</option>
+                <option value="oz">Ounces (oz)</option>
+                <option value="lb">Pounds (lb)</option>
+                <option value="st">Stone (st)</option>
+                <option value="t">Metric tons (t)</option>
+              </select>
+            </div>
+            <button class="swap-btn" id="weightSwap" aria-label="Swap units">⇄</button>
+            <div class="field">
+              <label for="weightToUnit">Converts to</label>
+              <input type="text" id="weightToValue" readonly>
+              <select id="weightToUnit">
+                <option value="mg">Milligrams (mg)</option>
+                <option value="g">Grams (g)</option>
+                <option value="kg">Kilograms (kg)</option>
+                <option value="oz" selected>Ounces (oz)</option>
+                <option value="lb">Pounds (lb)</option>
+                <option value="st">Stone (st)</option>
+                <option value="t">Metric tons (t)</option>
+              </select>
+            </div>
+          </div>
+          <div class="result-box">
+            <div class="result-value" id="weightResult">—</div>
+            <div class="result-note">Rounded to 6 significant digits</div>
+          </div>
+        </div>
+
+        <!-- Temperature -->
+        <div class="converter-panel" id="panel-temperature">
+          <div class="converter-row">
+            <div class="field">
+              <label for="tempFromValue">Amount</label>
+              <input type="number" id="tempFromValue" value="0" step="any">
+              <select id="tempFromUnit">
+                <option value="c" selected>Celsius (°C)</option>
+                <option value="f">Fahrenheit (°F)</option>
+                <option value="k">Kelvin (K)</option>
+              </select>
+            </div>
+            <button class="swap-btn" id="tempSwap" aria-label="Swap units">⇄</button>
+            <div class="field">
+              <label for="tempToUnit">Converts to</label>
+              <input type="text" id="tempToValue" readonly>
+              <select id="tempToUnit">
+                <option value="c">Celsius (°C)</option>
+                <option value="f" selected>Fahrenheit (°F)</option>
+                <option value="k">Kelvin (K)</option>
+              </select>
+            </div>
+          </div>
+          <div class="result-box">
+            <div class="result-value" id="tempResult">—</div>
+            <div class="result-note">Rounded to 2 decimal places</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="grid grid-3 value-grid" style="max-width:640px;margin:32px auto 0;">
+        <div class="card value-card">
+          <h3>Precise math</h3>
+          <p>Conversions use exact standard factors, not rough approximations.</p>
+        </div>
+        <div class="card value-card">
+          <h3>No page reloads</h3>
+          <p>Everything updates instantly as you type — nothing to submit.</p>
+        </div>
+        <div class="card value-card">
+          <h3>Works offline</h3>
+          <p>Once loaded, the converter needs no internet connection to run.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-copy">© <span id="year"></span> ClockTime Converter. All rights reserved.</div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="converter.html">Unit Converter</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | ClockTime Converter</title>
+<meta name="description" content="Get in touch with the ClockTime Converter team — questions, feedback, and feature requests welcome.">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">🕒</span>
+      ClockTime Converter
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="converter.html">Unit Converter</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Get in touch</h1>
+      <p>Questions, bug reports, or a feature you'd like to see — we read every message.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="contact-layout">
+
+        <div class="card">
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="field-group">
+                <label for="firstName">First name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Jordan" required>
+              </div>
+              <div class="field-group">
+                <label for="lastName">Last name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Rivera" required>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="field-group">
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic">
+                <option value="general">General question</option>
+                <option value="bug">Report a bug</option>
+                <option value="feature">Feature request</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">Send message</button>
+
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3 style="font-size:16px; margin-bottom: 4px;">Other ways to reach us</h3>
+          <p style="font-size: 13.5px; margin-bottom: 8px;">Most people hear back within one to two business days.</p>
+
+          <div class="contact-info-item">
+            <div class="icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <p>hello@clocktimeconverter.example</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon">💬</div>
+            <div>
+              <h4>Feedback &amp; feature requests</h4>
+              <p>We prioritize the most-requested features each month.</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon">🐞</div>
+            <div>
+              <h4>Found a bug?</h4>
+              <p>Include your browser and time zone so we can reproduce it faster.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-copy">© <span id="year"></span> ClockTime Converter. All rights reserved.</div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="converter.html">Unit Converter</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

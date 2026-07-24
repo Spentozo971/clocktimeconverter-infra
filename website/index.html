@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClockTime Converter — World Clock &amp; Time Zone Converter</title>
+<meta name="description" content="Compare live time across cities and time zones instantly. A free, fast world clock and time zone converter with no sign-up required.">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">🕒</span>
+      ClockTime Converter
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="active">Home</a>
+      <a href="converter.html">Unit Converter</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">● Updates live, every second</span>
+      <h1>Compare time across the world, instantly.</h1>
+      <p class="lead">Add any cities or time zones and see exactly what time it is for everyone — no sign-up, no ads getting in the way, just the time.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="card">
+        <div class="clock-toolbar">
+          <div class="add-zone">
+            <select id="zoneSelect" aria-label="Choose a city or time zone"></select>
+            <button class="btn btn-primary" id="addZoneBtn">Add city</button>
+          </div>
+          <button class="btn btn-secondary" id="use24hBtn">Switch to 24-hour</button>
+        </div>
+
+        <div class="zone-grid" id="zoneGrid"></div>
+        <p class="helper-text">Your local time zone is pinned automatically and detected from your browser. Add up to 8 more cities to compare.</p>
+
+        <div class="diff-panel">
+          <h2>Time difference at a glance</h2>
+          <div style="overflow-x:auto;">
+            <table class="diff-table" id="diffTable">
+              <thead>
+                <tr>
+                  <th>City</th>
+                  <th>Time zone</th>
+                  <th>Current time</th>
+                  <th>Offset vs. you</th>
+                </tr>
+              </thead>
+              <tbody id="diffTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="grid grid-3 value-grid">
+        <div class="card value-card">
+          <div class="icon">⚡</div>
+          <h3>Real-time by design</h3>
+          <p>Every clock ticks live in your browser using accurate system time zone data — no page refresh required.</p>
+        </div>
+        <div class="card value-card">
+          <div class="icon">🌍</div>
+          <h3>Any city, any zone</h3>
+          <p>Search hundreds of major cities and IANA time zones, from Auckland to Anchorage.</p>
+        </div>
+        <div class="card value-card">
+          <div class="icon">🔒</div>
+          <h3>Private by default</h3>
+          <p>Everything runs client-side in your browser. We don't log your searches or track which cities you compare.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-copy">© <span id="year"></span> ClockTime Converter. All rights reserved.</div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="converter.html">Unit Converter</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

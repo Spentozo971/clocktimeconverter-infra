@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | ClockTime Converter</title>
+<meta name="description" content="Learn about ClockTime Converter, a small team building fast, no-nonsense time zone and unit conversion tools.">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">🕒</span>
+      ClockTime Converter
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="converter.html">Unit Converter</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Small tools, done properly.</h1>
+      <p>ClockTime Converter is a focused set of everyday utilities, built to be fast, clear, and free of clutter.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container prose">
+      <h2>Why we built this</h2>
+      <p>We got tired of opening a time zone converter or a unit calculator and being met with pop-up ads, autoplay video, and three screens of "helpful" content before the actual tool. ClockTime Converter started as an internal script one of us used for coordinating calls across offices in different countries — it eventually turned into something worth sharing.</p>
+      <p>The goal has stayed the same since day one: give people a tool that opens fast, works immediately, and gets out of the way.</p>
+
+      <h2>What we make</h2>
+      <p>Right now that means a live world clock and time zone converter, plus a straightforward unit converter for length, weight, and temperature. Both run entirely in your browser — there's no server processing your inputs, no account to create, and no data collected about what you convert.</p>
+
+      <h2>How we think about design</h2>
+      <p>We treat utility software like it should be treated: quiet, quick, and reliable. That means restrained visuals, careful typography, and interfaces that respond instantly rather than "loading" simple math. If a feature doesn't make the core tool better, it doesn't make the cut.</p>
+
+      <h2>What's next</h2>
+      <p>We're a small, independent team and we build in the open based on what people actually ask for. Currency conversion, more measurement categories, and a lightweight API are all on our radar. If there's something you'd like to see, the <a href="contact.html" style="color: var(--accent); text-decoration: underline;">contact page</a> reaches us directly.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat">
+          <div class="num">100%</div>
+          <div class="label">Client-side, no tracking</div>
+        </div>
+        <div class="stat">
+          <div class="num">0</div>
+          <div class="label">Ads on the tool pages</div>
+        </div>
+        <div class="stat">
+          <div class="num">&lt;1s</div>
+          <div class="label">Typical load time</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-copy">© <span id="year"></span> ClockTime Converter. All rights reserved.</div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="converter.html">Unit Converter</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

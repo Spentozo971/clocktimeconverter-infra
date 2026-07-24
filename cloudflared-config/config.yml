@@ -1,0 +1,8 @@
+tunnel: 39adac21-d6eb-4eb8-8f39-da7583ec5501
+credentials-file: /etc/cloudflared/39adac21-d6eb-4eb8-8f39-da7583ec5501.json
+ingress:
+  - hostname: clocktimeconverter.com
+    service: http://localhost:80
+  - hostname: n8n.clocktimeconverter.com
+    service: http://localhost:5678
+  - service: http_status:404
